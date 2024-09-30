@@ -10,23 +10,23 @@ class MyDocument extends Document {
           <meta name="googlebot" content="index,follow" />
           <meta
             name="description"
-            content="Slayer Bot Moderasyon, Eğlence, Ekonomi, Sunucu Koruma, Müzik, Botlist, Çekiliş, Hatırlatıcı, Abone Sistemi, Log, Yapay Zeka ve Daha Fazla Özelliği Barındıran Bir Discord Botudur."
+            content="Svex Bot= Moderasyon, Eğlence, Ekonomi, Sunucu Koruma, Müzik, Botlist, Çekiliş, Hatırlatıcı, Abone Sistemi, Log, Yapay Zeka ve Daha Fazla Özelliği Barındıran Bir Discord Botudur."
           />
           <meta name="twitter:card" content="summary" />
-          <meta name="twitter:site" content="@SlayerBot" />
-          <meta name="twitter:creator" content="@SlayerBot" />
-          <meta property="og:url" content="https://slayer-bot.vercel.app" />
+          <meta name="twitter:site" content="@Svex" />
+          <meta name="twitter:creator" content="@Svex" />
+          <meta property="og:url" content="https://Svex.vercel.app" />
           <meta property="og:type" content="website" />
-          <meta property="og:title" content="Slayer Bot" />
+          <meta property="og:title" content="Svex" />
           <link rel="icon" href="/img/logo2.png" type="image/x-icon" />
           <meta
             property="og:description"
             content="Slayer Bot Moderasyon, Eğlence, Ekonomi, Sunucu Koruma, Müzik, Botlist, Çekiliş, Hatırlatıcı, Abone Sistemi, Log, Yapay Zeka ve Daha Fazla Özelliği Barındıran Bir Discord Botudur."
           />
           <meta property="og:image" content="/img/logo.jpg" />
-          <meta property="og:image:alt" content="Slayer Bot" />
+          <meta property="og:image:alt" content="Svex" />
           <meta property="og:locale" content="en_GB" />
-          <meta property="og:site_name" content="Slayer Bot" />
+          <meta property="og:site_name" content="Svex" />
           <meta name="theme-color" content="#087ddd" />
           <link rel="icon" href="/img/logo.jpg" type="image/x-icon" />
           <link
