@@ -10,14 +10,14 @@ export default function Index() {
       <img width="500" src="/img/bck.png" />
       </div>
         <p className="animateHeader text-4xl font-extrabold text-center text-white">
-          Slayer Bot
+          Svex
         </p>
         <p className="animateHeader text-white text-opacity-50 text-center mt-5">
        Moderasyon, Eğlence, Ekonomi, Yapay Zeka, Müzik, Botlist, Log, Sunucu Koruma ve Hatta Daha Sayılmayacak Bir Çok Özelliği Barındıran Slayer Bot ile Sunucunuzun Tüm İhtiyaçlarını Tek Başına Büyük Ölçüde Giderebilirsiniz.
 	  </p>
         <div className="animateHeader mt-10 flex flex-wrap items-center justify-center gap-x-4">
   
-            <Link href={"https://discord.com/oauth2/authorize?client_id=1201613667561639947&permissions=139455884671&response_type=code&redirect_uri=https%3A%2F%2Fdiscord.gg%2Fc24GWCtxQc&integration_type=0&scope=email+guilds+identify+bot+guilds.join+openid"}>
+            <Link href={"https://discord.com/oauth2/authorize?client_id=1266861620555153553&scope=bot%20applications.commands&permissions=0"}>
               <a
                 className={
                   "flex items-center px-6 justify-center gap-x-2 shadow-lg shadow-amber-600/20 rounded-xl py-4 font-medium bg-gradient-to-bl from-amber-700 to-amber-500 hover:opacity-80 transition duration-200 text-white " 
@@ -47,7 +47,7 @@ Botu Oyla</a>
           <div className="col-span-4">
             <p className="text-white text-4xl font-bold" dangerouslySetInnerHTML={{ __html:"Slayer Bot" }} />
             <p className="text-white text-md font-medium text-gray-500/75" dangerouslySetInnerHTML={{ __html: "Kendi Duygularınızla Kendinizi Rahatlatabileceğiniz Bir Ortamı Yaratmaya Ne Dersiniz?" }}/>
-            <a href="https://discord.gg/MfYJqanN8M" className={"mt-10 flex items-center px-4 justify-center gap-x-2 shadow-lg shadow-amber-600/20 cursor-pointer rounded-xl py-4 font-medium bg-gradient-to-r from-amber-700 to-amber-500 hover:opacity-80 transition duration-200 text-white"}>
+            <a href="https://discord.gg/Pc5bmsP9RF" className={"mt-10 flex items-center px-4 justify-center gap-x-2 shadow-lg shadow-amber-600/20 cursor-pointer rounded-xl py-4 font-medium bg-gradient-to-r from-amber-700 to-amber-500 hover:opacity-80 transition duration-200 text-white"}>
               <i className="fab fa-discord mr-2" />Destek Sunucusu
             </a>
           </div>
@@ -87,7 +87,7 @@ Botu Oyla</a>
               <>
                 <div className="lg:mx-4 lg:p-8 py-4 lg:py-16 flex items-center justify-center flex-col text-center w-full lg:w-auto lg:text-left lg:flex-none">
                   <img src="https://media.discordapp.net/attachments/907378577253744640/1176892776877666325/image.png"  width="256" className="lg:hidden rounded-xl mb-5 shadow-xl shadow-black" />
-                  <p className="text-3xl text-white font-semibold">Slayer Bot</p>
+                  <p className="text-3xl text-white font-semibold">Svex</p>
                   <p className="text-md text-white font-medium text-gray-500 line-clamp-5">Sunucunu Daha İyi Hale Getirmeye Var Mısın?</p>
                 </div>
                 <img src="https://media.discordapp.net/attachments/907378577253744640/1176892776877666325/image.png" className="hidden lg:block rounded-xl perspective-right shadow-xl shadow-black" />
