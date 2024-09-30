@@ -37,14 +37,14 @@ export default function AwardApp({ Component, pageProps }) {
       name: "Destek Sunucusu",
       icon: "fab fa-discord",
       activeIcon: "fab fa-discord",
-      href: "https://discord.gg/jeT6cae5CF",
+      href: "https://discord.gg/Pc5bmsP9RF",
     },
     {
       link: true,
       name: "Botu Ekle",
       icon: "fal fa-robot",
       activeIcon: "fab fa-robot",
-      href: "https://discord.com/oauth2/authorize?client_id=1201613667561639947&permissions=139455884671&response_type=code&redirect_uri=https%3A%2F%2Fdiscord.gg%2Fc24GWCtxQc&integration_type=0&scope=email+guilds+identify+bot+guilds.join+openid",
+      href: "https://discord.com/oauth2/authorize?client_id=1266861620555153553&scope=bot%20applications.commands&permissions=0",
     },
        {
       link: true,
@@ -71,7 +71,7 @@ export default function AwardApp({ Component, pageProps }) {
       />
       <Head>
         <title>
-          Slayer Bot
+          Svex
         </title>
       </Head>
       <main className="transition-all duration-200 z-10 absolute inset-0 px-5 h-screen max-w-7xl w-full mx-auto">
