@@ -12,7 +12,7 @@ export default function Footer() {
                         <div className="col-span-3">
                             <div className="flex items-center space-x-5">
                                 <img src="/img/logo2.png" className="rounded-full w-12" />
-                                <p className="font-semibold text-xl text-white">Slayer Bot</p>
+                                <p className="font-semibold text-xl text-white">Svex</p>
                             </div>
                             <Menu as="div" className="relative mt-3 inline-block text-left">
                                 <div>
@@ -43,12 +43,12 @@ export default function Footer() {
                                 </Link>
                             </div>
                             <div>
-                                <a href="https://discord.gg/MfYJqanN8M" target="_blank" className="text-white/50 hover:text-white hover:underline transform duration-200">
+                                <a href="https://discord.gg/Pc5bmsP9RF" target="_blank" className="text-white/50 hover:text-white hover:underline transform duration-200">
                                     Destek Sunucusu
                                 </a>
                             </div>
                             <div>
-                                <a href="https://discord.gg/MfYJqanN8M" target="_blank" className="text-white/50 hover:text-white hover:underline transform duration-200">
+                                <a href="https://discord.gg/Pc5bmsP9RF" target="_blank" className="text-white/50 hover:text-white hover:underline transform duration-200">
                                     Botu Davet Et
                                 </a>
                             </div>
@@ -97,7 +97,7 @@ export default function Footer() {
                     </div>
                     <div className="mt-10 grid content-center grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
                         <p className="text-white text-center sm:text-left text-opacity-50">
-                            {new Date().getFullYear()} &copy; Slayer
+                            {new Date().getFullYear()} &copy; Svex
                         </p>
                         <div className="hidden md:flex items-center justify-center">
                                 <p className={"text-xs text-green-400"}>
