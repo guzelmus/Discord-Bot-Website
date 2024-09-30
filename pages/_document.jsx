@@ -21,7 +21,7 @@ class MyDocument extends Document {
           <link rel="icon" href="/img/logo2.png" type="image/x-icon" />
           <meta
             property="og:description"
-            content="Slayer Bot Moderasyon, Eğlence, Ekonomi, Sunucu Koruma, Müzik, Botlist, Çekiliş, Hatırlatıcı, Abone Sistemi, Log, Yapay Zeka ve Daha Fazla Özelliği Barındıran Bir Discord Botudur."
+            content="Svex Bot= Moderasyon, Eğlence, Ekonomi, Sunucu Koruma, Müzik, Botlist, Çekiliş, Hatırlatıcı, Abone Sistemi, Log, Yapay Zeka ve Daha Fazla Özelliği Barındıran Bir Discord Botudur."
           />
           <meta property="og:image" content="/img/logo.jpg" />
           <meta property="og:image:alt" content="Svex" />
