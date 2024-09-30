@@ -14,7 +14,7 @@ const MobileNavbar = ({ open, setOpen, NavItems }) => {
                 <div className="flex justify-between border-b border-white/20 items-center px-5 py-4">
                     <div className="flex items-center">
                         <img width="32" className="rounded-full icon-glow" src="/img/logo.jpg" />
-                        <p className=" font-extrabold ml-1 text-2xl">Slayer Bot</p>
+                        <p className=" font-extrabold ml-1 text-2xl">Svex</p>
                     </div>
                     <button onClick={() => setOpen(!open)}><i className="cursor-pointer fa fa-times text-xl mr-2" /></button>
                 </div>
@@ -83,7 +83,7 @@ const Header = ({ $, NavItems }) => {
                                 width="48" height="48"
                             />
                             <p className="invisible md:visible text-xl text-white font-semibold">
-                              <a href="/"><span className="text-amber-400">Slayer</span>Bot</a>
+                              <a href="/"><span className="text-amber-400">Svex</span>Bot</a>
                             </p>
                         </div>
                         <ul className="hidden lg:flex items-center space-x-4">
@@ -166,7 +166,7 @@ const Header = ({ $, NavItems }) => {
                                 </Menu.Items>
                             </Transition>
                         </Menu>
-                        <Link href="https://discord.com/oauth2/authorize?client_id=1201613667561639947&permissions=139455884671&response_type=code&redirect_uri=https%3A%2F%2Fdiscord.gg%2Fc24GWCtxQc&integration_type=0&scope=email+guilds+identify+bot+guilds.join+openid">
+                        <Link href="https://discord.com/oauth2/authorize?client_id=1266861620555153553&scope=bot%20applications.commands&permissions=0">
                             <a className="w-auto flex items-center justify-center shadow-lg gap-x-2 shadow-amber-600/20 rounded-xl py-2.5 font-medium px-7 bg-gradient-to-tl from-amber-500 to-amber-700 text-white  hover:opacity-80 transition duration-200">
                                Botu Ekle
                             </a>
