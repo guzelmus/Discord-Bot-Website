@@ -13,7 +13,7 @@ export default function Index() {
           Svex
         </p>
         <p className="animateHeader text-white text-opacity-50 text-center mt-5">
-       Moderasyon, Eğlence, Ekonomi, Yapay Zeka, Müzik, Botlist, Log, Sunucu Koruma ve Hatta Daha Sayılmayacak Bir Çok Özelliği Barındıran Slayer Bot ile Sunucunuzun Tüm İhtiyaçlarını Tek Başına Büyük Ölçüde Giderebilirsiniz.
+       Moderasyon, Eğlence, Ekonomi, Yapay Zeka, Müzik, Botlist, Log, Sunucu Koruma ve Hatta Daha Sayılmayacak Bir Çok Özelliği Barındıran Svex ile Sunucunuzun Tüm İhtiyaçlarını Tek Başına Büyük Ölçüde Giderebilirsiniz.
 	  </p>
         <div className="animateHeader mt-10 flex flex-wrap items-center justify-center gap-x-4">
   
