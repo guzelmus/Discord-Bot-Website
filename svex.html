@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Svex - Ultra Gelişmiş Discord Botu</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+<style>
+:root {
+--primary-color: #7289DA;
+--secondary-color: #2C2F33;
+--text-color: #FFFFFF;
+--accent-color: #99AAB5;
+--success-color: #43B581;
+--error-color: #F04747;
+--dark-accent: #23272A;
+}
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: 'Poppins', sans-serif;
+background-color: var(--secondary-color);
+color: var(--text-color);
+line-height: 1.6;
+overflow-x: hidden;
+}
+
+.container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 20px;
+}
+
+header {
+background-color: var(--dark-accent);
+padding: 15px 0;
+position: fixed;
+width: 100%;
+top: 0;
+z-index: 1000;
+box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+transition: all 0.3s ease;
+}
+
+header.scrolled {
+background-color: rgba(35, 39, 42, 0.9);
+padding: 10px 0;
+}
+
+nav {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.logo {
+font-size: 24px;
+font-weight: 700;
+color: var(--primary-color);
+text-decoration: none;
+transition: all 0.3s ease;
+}
+
+.logo:hover {
+transform: scale(1.05);
+}
+
+nav ul {
+list-style-type: none;
+display: flex;
+}
+
+nav ul li {
+margin-left: 30px;
+}
+
+nav ul li a {
+color: var(--text-color);
+text-decoration: none;
+font-weight: 600;
+transition: color 0.3s ease;
+position: relative;
+}
+
+nav ul li a::after {
+content: '';
+position: absolute;
+width: 0;
+height: 2px;
+bottom: -5px;
+left: 0;
+background-color: var(--primary-color);
+transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {width: 100%;
+}
+
+.hero {
+background-image: url('https://example.com/hero-bg.jpg');
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+height: 100vh;
+display: flex;
+align-items: center;
+text-align: center;
+position: relative;
+overflow: hidden;
+}
+
+.hero::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: rgba(0,0,0,0.5);
+}
+
+.hero-content {
+position: relative;
+z-index: 1;
+}
+
+.hero h1 {
+font-size: 48px;
+margin-bottom: 20px;
+text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+opacity: 0;
+transform: translateY(20px);
+transition: all 0.5s ease;
+}
+
+.hero p {
+font-size: 24px;
+margin-bottom: 40px;
+opacity: 0;
+transform: translateY(20px);
+transition: all 0.5s ease 0.2s;
+}
+
+.cta-button {
+display: inline-block;
+background-color: var(--primary-color);
+color: var(--text-color);
+padding: 12px 24px;
+text-decoration: none;
+border-radius: 5px;
+font-weight: bold;
+transition: all 0.3s ease;
+opacity: 0;
+transform: translateY(20px);
+transition: all 0.5s ease 0.4s;
+}
+
+.cta-button:hover {
+background-color: var(--accent-color);
+transform: translateY(-3px);
+box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.features {
+padding: 100px 0;
+background-color: var(--dark-accent);
+}
+
+.section-title {
+text-align: center;
+font-size: 36px;
+margin-bottom: 50px;
+color: var(--primary-color);
+}
+
+.features-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 30px;
+}
+
+.feature-card {
+background-color: var(--secondary-color);
+padding: 30px;
+border-radius: 10px;
+text-align: center;
+transition: all 0.3s ease;
+cursor: pointer;
+}
+
+.feature-card:hover {
+transform: translateY(-10px);
+box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.feature-icon {
+font-size: 48px;
+color: var(--primary-color);
+margin-bottom: 20px;
+transition: all 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+transform: scale(1.1);
+}
+
+.feature-card h3 {
+margin-bottom: 15px;
+color: var(--accent-color);
+}
+
+.commands {
+padding: 100px 0;background-color: var(--secondary-color);
+}
+
+.command-list {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 20px;
+}
+
+.command-item {
+background-color: var(--dark-accent);
+padding: 20px;
+border-radius: 5px;
+cursor: pointer;
+transition: all 0.3s ease;
+}
+
+.command-item:hover {
+background-color: var(--primary-color);
+transform: translateY(-5px);
+box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.command-name {
+font-weight: 600;
+color: var(--primary-color);
+margin-bottom: 10px;
+transition: all 0.3s ease;
+}
+
+.command-item:hover .command-name {
+color: var(--text-color);
+}
+
+.command-description {
+font-size: 14px;
+opacity: 0.8;
+transition: all 0.3s ease;
+}
+
+.command-item:hover .command-description {
+opacity: 1;
+}
+
+.stats {
+background-color: var(--dark-accent);
+padding: 100px 0;
+text-align: center;
+}
+
+.stats-grid {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 30px;
+margin-top: 50px;
+}
+
+.stat-item {
+background-color: var(--secondary-color);
+padding: 30px;
+border-radius: 10px;
+transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+transform: translateY(-5px);
+box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.stat-item h3 {
+font-size: 36px;
+color: var(--primary-color);
+margin-bottom: 10px;
+}
+
+.stat-item p {
+font-size: 18px;
+color: var(--accent-color);
+}
+
+.about {
+padding: 100px 0;
+background-color: var(--secondary-color);
+}
+
+.team-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+gap: 30px;
+margin-top: 50px;
+}
+
+.team-member {
+text-align: center;
+cursor: pointer;
+}
+
+.team-member img {
+width: 150px;
+height: 150px;
+border-radius: 50%;
+margin-bottom: 15px;
+transition: all 0.3s ease;
+}
+
+.team-member:hover img {
+transform: scale(1.1);
+box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.team-member h3 {
+color: var(--primary-color);
+margin-bottom: 5px;
+}
+
+.team-member p {
+color: var(--accent-color);
+font-size: 14px;
+}
+
+.testimonials {
+padding: 100px 0;
+background-color: var(--dark-accent);
+}
+
+.testimonial-slider {
+max-width: 800px;margin: 0 auto;
+text-align: center;
+}
+
+.testimonial-item {
+padding: 20px;
+}
+
+.testimonial-content {
+font-style: italic;
+font-size: 18px;
+margin-bottom: 20px;
+}
+
+.testimonial-author {
+font-weight: bold;
+color: var(--primary-color);
+}
+
+.faq {
+padding: 100px 0;
+background-color: var(--secondary-color);
+}
+
+.faq-item {
+margin-bottom: 20px;
+}
+
+.faq-question {
+background-color: var(--dark-accent);
+padding: 15px;
+border-radius: 5px;
+cursor: pointer;
+font-weight: bold;
+transition: all 0.3s ease;
+}
+
+.faq-question:hover {
+background-color: var(--primary-color);
+}
+
+.faq-answer {
+padding: 15px;
+background-color: rgba(255,255,255,0.1);
+border-radius: 0 0 5px 5px;
+display: none;
+}
+
+footer {
+background-color: var(--dark-accent);
+color: var(--text-color);
+text-align: center;
+padding: 30px 0;
+}
+
+.footer-content {
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+}
+
+.footer-links ul {
+list-style-type: none;
+padding: 0;
+}
+
+.footer-links ul li {
+display: inline;
+margin-right: 20px;
+}
+
+.footer-links ul li a {
+color: var(--text-color);
+text-decoration: none;
+transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+color: var(--primary-color);
+}
+
+.social-links {
+margin-top: 20px;
+}
+
+.social-links a {
+color: var(--text-color);
+font-size: 24px;
+margin: 0 10px;
+transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+color: var(--primary-color);
+transform: translateY(-3px);
+}
+
+.scroll-to-top {
+position: fixed;
+bottom: 20px;
+right: 20px;
+background-color: var(--primary-color);
+color: var(--text-color);
+width: 40px;
+height: 40px;
+text-align: center;
+line-height: 40px;
+border-radius: 50%;
+cursor: pointer;
+opacity: 0;
+transition: all 0.3s ease;
+}
+
+.scroll-to-top.show {
+opacity: 1;
+}
+
+@media (max-width: 768px) {
+.hero h1 {
+font-size: 36px;
+}
+
+.hero p {
+font-size: 18px;
+}
+
+.stats-grid {
+grid-template-columns: repeat(2, 1fr);
+}
+
+.footer-content {
+flex-direction: column;
+}
+
+.footer-links {
+margin-top: 20px;
+}
+}
+</style>
+</head>
+<body>
+<header>
+    <div class="container">
+        <nav>
+        <a href="#" class="logo">Svex</a>
+        <ul>
+        <li><a href="#home">Ana Sayfa</a></li>
+        <li><a href="#features">Özellikler</a></li>
+        <li><a href="#commands">Komutlar</a></li>
+        <li><a href="#stats">İstatistikler</a></li>
+        <li><a href="#about">Hakkımızda</a></li>
+        <li><a href="#faq">SSS</a></li>
+        </ul>
+        </nav>
+        </div>
+        </header>
+        
+        <main>
+        <section id="home" class="hero">
+        <div class="container hero-content">
+        <h1>Svex - Discord'un Geleceği</h1>
+        <p>Yapay zeka destekli, çok yönlü Discord botu</p>
+        <a href="#" class="cta-button">Sunucuna Ekle</a>
+        </div>
+        </section>
+        
+        <section id="features" class="features">
+        <div class="container">
+        <h2 class="section-title">Özellikler</h2>
+        <div class="features-grid">
+        <div class="feature-card" data-feature="ai">
+        <i class="fas fa-brain feature-icon"></i>
+        <h3>Yapay Zeka Asistanı</h3>
+        <p>GPT-4 destekli akıllı asistan ile sohbet edin ve sorularınızı yanıtlayın.</p>
+        </div>
+        <div class="feature-card" data-feature="music">
+        <i class="fas fa-music feature-icon"></i>
+        <h3>Gelişmiş Müzik</h3>
+        <p>Spotify ve YouTube entegrasyonu ile kesintisiz müzik deneyimi yaşayın.</p>
+        </div>
+        <div class="feature-card" data-feature="mod">
+        <i class="fas fa-shield-alt feature-icon"></i>
+        <h3>Akıllı Moderasyon</h3>
+        <p>Otomatik içerik filtreleme ve spam koruması ile sunucunuzu güvende tutun.</p>
+        </div>
+        <div class="feature-card" data-feature="stats">
+        <i class="fas fa-chart-line feature-icon"></i>
+        <h3>Detaylı Analizler</h3>
+        <p>Sunucu ve kullanıcı istatistikleri ile topluluğunuzu daha iyi anlayın.</p>
+        </div>
+        <div class="feature-card" data-feature="games">
+        <i class="fas fa-gamepa
